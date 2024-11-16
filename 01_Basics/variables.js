@@ -24,7 +24,7 @@ because of issue in block space and functional scope
 /*
 If anyvariable is left only initilaised and 
 not assigned any value
-js gives it undefines 
+js gives it undefined 
 */
 
 /*
