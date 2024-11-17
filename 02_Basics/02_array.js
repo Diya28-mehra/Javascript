@@ -14,12 +14,12 @@ const aa = [1,2,3,[4,5,6],7,[6,7,[4,5]]];
 const realarr = aa.flat(Infinity); //This returns a flat array by conactinating all the nested arrays can also pass the parameter(1,2or 3)
 console.log(realarr)
 
-console.log(Array.isArray("Hitesh"));
-console.log(Array.from("Hitesh"));
-console.log(Array.from({name:"Hitesh"})) //interesting
+console.log(Array.isArray("Hitesh")); //false
+console.log(Array.from("Hitesh")); //[ 'H', 'i', 't', 'e', 's', 'h' ]
+console.log(Array.from({name:"Hitesh"})) //interesting []
 
 let score1 = 1;
 let score2 = 2;
 let score3 = 3;
-console.log(Array.of(score1,score2,score3));
+console.log(Array.of(score1,score2,score3)); //[ 1, 2, 3 ]
 

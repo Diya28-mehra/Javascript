@@ -75,3 +75,9 @@ const course = {
 const {courseinstructor:instructor} = course
 //console.log(courseinstructor) //canbe renamed as well show below
 console.log(instructor)
+
+// {
+//     name: "diya",
+//     coursename: "js in hindi",
+//     price: "free"
+// }

@@ -1,15 +1,15 @@
 let score = "1aa";
 //when we take input from backend we dont know what type of value it is
 // so we use type of to see 
-console.log(typeof score);
-console.log(typeof (score));
+console.log(typeof score); //string
+console.log(typeof (score)); //string 
 
-let vm = Number(score);
+let vm = Number(score);  
 //let vm = String(score);
-console.log(typeof (vm));
-console.log(typeof (score));
-console.log(vm);
-console.log(Boolean(score));
+console.log(typeof (vm)); //number
+console.log(typeof (score)); //string 
+console.log(vm); //NaN
+console.log(Boolean(score)); //true
 
 // if "55" converted it gives 55
 //if "55fffffffd" converted it gives NaN not a number but type is still number only

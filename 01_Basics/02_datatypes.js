@@ -17,5 +17,5 @@ let bool = false;
 //object 
 
 console.log(typeof(age));
-console.log(typeof(null));
-console.log(typeof(undefined));
+console.log(typeof(null)); //Object
+console.log(typeof(undefined)); //undefined
