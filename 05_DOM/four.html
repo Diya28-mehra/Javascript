@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(lang) {
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addlang('python');
+    addlang("javascript");
+    //This way is not optimised as it traverse through the tree structure 
+    //of the whole parnet class and then adds the list element at the end
+    //It may give error when we have large page and more data 
+    //So we have one more optimised way to add element 
+    //Always use createnextnode
+    function addlangopti(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+    }
+    addlangopti("Java")
+    addlangopti("golang")
+
+    //edit
+    const secondlang = document.querySelector("li:nth-child(2)")
+    //secondlang.innerHTML="Moto" //Not optimised dont use this
+    const newli = document.createElement('li')
+    newli.textContent="Mojo"
+    secondlang.replaceWith(newli)
+
+    //edit
+    const flang = document.querySelector('li:first-child')
+    flang.outerHTML='<li>Typescript</li>'
+
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+
+</script>
+
+</html>
