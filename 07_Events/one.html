@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl Clicked")
+    // }
+
+    //Attach Event
+    //Jquery - oneeventlistener
+
+    //type, timestamp, defaultprevented, target, toEleement, srcElement, currTarget
+    //clientX, clientY, screenx, screeny tiltx, tilty
+    //altkey, ctrlkey, shiftkey, keycode
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log(e)
+    // },false) 
+    //Third parameter is false most of the times 
+    //we dont use false but should be put as some applications wouldnot work without that =>(Event Propagation)
+    //Event Bubbling(niche se uppar jana) like button to div to body By default and 
+    // Event Capturing(uupr se niche aana) like body to div should be set True
+    // add capture: true
+
+
+    //Diff between
+    //The difference is that target refers to the element on which the event was initially fired, while currentTarget refers to the element to which this event handler has been attached.
+
+    //While target remains the same while an event bubbles up, currentTarget will be different for event handlers 
+    //that are attached to different elements in the hierarchy.
+
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul")
+    // },false) 
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("Owl Clicked")
+    //     e.stoppropagation() //stops event bubbling
+    // },false) Like a video playing example on hidden body 
+
+    // The Event object has a function available on it called stopPropagation() which, when called inside an event handler, 
+    // prevents the event from bubbling up to any other elements.
+
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     console.log("google clicked")
+    // },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode)
+        if (e.target.tagName==='IMG'){
+            let removeIt = e.targetparentNode
+            // removeIt.remove()
+            removeIt.parentNode.removeChild(removeIt)
+        }
+    })
+</script>
+</html>

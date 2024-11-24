@@ -47,5 +47,5 @@ ch() //Here this is giving an empty object
 
 const addtwonum=(n1,n2)=>(n1+n2)
 const add=(n1,n2)=> ({username:"diya"})
-//always use round parenthesis 
+//always use round parenthesis with arrow 
 
