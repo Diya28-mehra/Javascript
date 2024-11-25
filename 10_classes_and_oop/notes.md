@@ -2,7 +2,7 @@ Javascript does not contain classes but it contains in the feature with the ECMA
 
 ## OOP (programming paradine)
 
-#Object - Collection of properties and methods 
+## Object - Collection of properties and methods 
 Ex- tolower(), Promises, etc
 
 ## why do we use OOP 
@@ -21,3 +21,6 @@ Encapsulation
 Inheritance
 Polymorphism
 
+Array or string or anything (inherited) -> Object -> Null 
+Function is also an object, also a function 
+thats why js is a prototype inheritance
