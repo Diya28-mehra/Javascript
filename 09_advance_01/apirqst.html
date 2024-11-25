@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    Value	State	Description
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" id='username'>Name</h5>
+          <p class="card-text" id='followers'>Followers.</p>
+        </div>
+    </div>
+</body>
+<script>
+    //Three to Four years ago, js dont use fetch method to send API requests
+    //It uses XML formatted requests and methods as they were so strong
+    //and use codes as written above sameway React uses the concept of states
+    const requesturl ='https://api.github.com/users/Diya28-mehra'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requesturl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if (xhr.readyState===4){
+            const data = JSON.parse(this.responseText)
+            document.getElementById('followers').innerHTML+=data.followers
+            document.getElementBYId('card-img-top').
+            console.log(this.responseText)
+        }
+    }
+    xhr.send()
+    //Javascript is actually run by a v8 engine which is written in C++
+    //Console.log and document.get and many more functions and methods are not a part of core js
+    //They are a part of browser or developers tool integrated with js core 
+</script>
+</html>
