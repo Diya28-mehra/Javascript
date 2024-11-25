@@ -1,0 +1,53 @@
+//Lexical Scoping 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "orange">Click Orange</button>
+    <button id = "green">Click Green</button>
+</body>
+<script>
+
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+
+    function clickHandler(color){
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+    //function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc(); //when we have passed he function to this variable the whole lexical scope goes
+    // myFunc();
+    //Bachhe maa baap se maang skte h pr bhai se nhi
+    //Chote bado se maang skte h maa baap bachho se nhi
+    // function init(){
+    //     let name = "Mozila"
+    //     function displayname(){
+    //         console.log(name)
+    //     }
+    //     displayname()
+    // }
+    // init()
+</script>
+</html>
